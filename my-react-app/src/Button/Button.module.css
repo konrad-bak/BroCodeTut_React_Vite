@@ -6,3 +6,12 @@
   border: none;
   cursor: pointer;
 }
+
+.button:hover{
+  background-color: rgb(66, 197, 186);
+}
+
+.button:active {
+  background-color: rgb(66, 197, 186);
+  transform: translateY(4px);
+}

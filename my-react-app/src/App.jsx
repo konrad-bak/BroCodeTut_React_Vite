@@ -5,7 +5,8 @@
 // import Button from "./Button/Button"
 // import Student from "./Student"
 // import UserGreeting from "./UserGreeting"
-import List from "./List"
+// import List from "./List"
+import ProfilePicture from "./ProfilePicture"
 
 function App() {
   const fruits = [
@@ -25,8 +26,9 @@ function App() {
 
   return(
     <>
-    <List items={fruits} category="Fruits" />
-    <List items={vegetables} category="Vegetables" />
+    <ProfilePicture />
+    {/* {fruits.length > 0 && <List items={fruits} category="Fruits" />}
+    {vegetables.length > 0 && <List items={vegetables} category="Vegetables" />} */}
     {/* <UserGreeting  isLoggedIn={true} username="Bonko" /> */}
     {/* <Student name="James" age={30} isStudent={true} />
     <Student name="Bob" age={43} isStudent={false} />

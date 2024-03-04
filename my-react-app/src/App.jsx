@@ -15,7 +15,13 @@
 // import UpdateObjectsState from "./UpdateObjectsState"
 // import UpdateArrays from "./UpdateArrays"
 // import UpdateArrayOfObjects from "./UpdateArrayOfObjects";
-import ToDoList from "./ToDoList";
+// import ToDoList from "./ToDoList";
+// import UseEffectComponent from "./UseEffectComponent";
+// import UseEffectComponent2 from "./UseEffectComponent2";
+// import DigitalClock from "./DigitalClock";
+// import ComponentA from "./UseContextComponents/ComponentA";
+// import Component from "./UseRefComponents/Component";
+import StopWatch from "./StopWatch/StopWatch";
 // import TempComp from "./TempComp"
 
 function App() {
@@ -36,7 +42,13 @@ function App() {
 
   return (
     <>
-      <ToDoList />
+      <StopWatch />
+      {/* <Component /> */}
+      {/* <ComponentA /> */}
+      {/* <DigitalClock /> */}
+      {/* <UseEffectComponent2 /> */}
+      {/* <UseEffectComponent /> */}
+      {/* <ToDoList /> */}
       {/* <UpdateArrayOfObjects /> */}
       {/* <UpdateArrays /> */}
       {/* <UpdateObjectsState /> */}

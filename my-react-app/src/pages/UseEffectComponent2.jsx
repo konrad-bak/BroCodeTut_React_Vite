@@ -8,6 +8,7 @@ function UseEffectComponent2() {
     window.addEventListener("resize", handleResize);
     console.log("EVENT LISTENER ADDED");
 
+    // return CLEAN-UP function
     return () => {
       window.removeEventListener("resize", handleResize);
       console.log("EVENT LISTENER REMOVED");

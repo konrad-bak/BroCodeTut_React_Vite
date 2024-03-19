@@ -1,6 +1,7 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
+import "./style.css";
 
-const Student = (props) => {
+const Student = props => {
   return (
     <div className="student">
       <p>Name: {props.name}</p>
@@ -8,16 +9,16 @@ const Student = (props) => {
       <p>Student: {props.isStudent ? "Yes" : "No"}</p>
     </div>
   );
-}
+};
 
 Student.propTypes = {
   name: PropTypes.string,
   age: PropTypes.number,
-  isStudent: PropTypes.bool
-}
+  isStudent: PropTypes.bool,
+};
 Student.defaultProps = {
   name: "Guest",
   age: 0,
   isStudent: false,
-}
+};
 export default Student;

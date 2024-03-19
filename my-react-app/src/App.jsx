@@ -1,30 +1,105 @@
-// import Header from "./Header"
-// import Footer from "./Footer"
-// import Food from "./Food"
-// import Card from "./Card"
-// import Button from "./Button/Button"
-// import Student from "./Student"
-// import UserGreeting from "./UserGreeting"
-// import List from "./List"
-// import ProfilePicture from "./ProfilePicture"
-// import MyComponent from "./MyComponent"
-// import Counter from "./Counter"
-// import ComponentOnChange from "./ComponentOnChange"
-// import ColorPicker from "./ColorPicker"
-// import CounterWithUpdater from "./CounterWithUpdater"
-// import UpdateObjectsState from "./UpdateObjectsState"
-// import UpdateArrays from "./UpdateArrays"
-// import UpdateArrayOfObjects from "./UpdateArrayOfObjects";
-// import ToDoList from "./ToDoList";
-// import UseEffectComponent from "./UseEffectComponent";
-// import UseEffectComponent2 from "./UseEffectComponent2";
-// import DigitalClock from "./DigitalClock";
-// import ComponentA from "./UseContextComponents/ComponentA";
-// import Component from "./UseRefComponents/Component";
-import StopWatch from "./StopWatch/StopWatch";
-// import TempComp from "./TempComp"
+import { NavLink, Outlet } from "react-router-dom";
 
 function App() {
+  const pages = [
+    {
+      name: "button",
+      title: "Button",
+    },
+    {
+      name: "cards",
+      title: "Cards",
+    },
+    {
+      name: "color-picker",
+      title: "ColorPicker",
+    },
+    {
+      name: "counter",
+      title: "Counter",
+    },
+    {
+      name: "counter-with-updater",
+      title: "Counter with Updater",
+    },
+    {
+      name: "digital-clock",
+      title: "Digital Clock",
+    },
+    {
+      name: "list",
+      title: "List",
+    },
+    {
+      name: "profiles",
+      title: "Profiles",
+    },
+    {
+      name: "stopwatch",
+      title: "StopWatch",
+    },
+    {
+      name: "student",
+      title: "Student",
+    },
+    {
+      name: "todo-list",
+      title: "ToDo List",
+    },
+    {
+      name: "use-callback",
+      title: "UseCallback Component",
+    },
+    {
+      name: "use-context",
+      title: "UseContext Component",
+    },
+    {
+      name: "use-memo",
+      title: "UseMemo Component",
+    },
+    {
+      name: "use-ref",
+      title: "UseRef Component",
+    },
+    {
+      name: "user-greeting",
+      title: "User Greeting",
+    },
+    {
+      name: "component-onchange",
+      title: "Component onChange",
+    },
+    {
+      name: "food",
+      title: "Food",
+    },
+    {
+      name: "profile-picture",
+      title: "Profile Picture",
+    },
+    {
+      name: "update-arrays",
+      title: "Update Arrays",
+    },
+    {
+      name: "update-array-of-object",
+      title: "Update Array of Object",
+    },
+    {
+      name: "update-object",
+      title: "Update Object",
+    },
+    {
+      name: "use-effect",
+      title: "UseEffect Component",
+    },
+    {
+      name: "use-effect2",
+      title: "UseEffect Component 2",
+    },
+  ];
+
   const fruits = [
     { id: 1, name: "apple", calories: 95 },
     { id: 2, name: "orange", calories: 45 },
@@ -41,41 +116,26 @@ function App() {
   ];
 
   return (
-    <>
-      <StopWatch />
-      {/* <Component /> */}
-      {/* <ComponentA /> */}
-      {/* <DigitalClock /> */}
-      {/* <UseEffectComponent2 /> */}
-      {/* <UseEffectComponent /> */}
-      {/* <ToDoList /> */}
-      {/* <UpdateArrayOfObjects /> */}
-      {/* <UpdateArrays /> */}
-      {/* <UpdateObjectsState /> */}
-      {/* <CounterWithUpdater /> */}
-      {/* <ColorPicker /> */}
-      {/* <ComponentOnChange /> */}
-      {/* <Counter /> */}
-      {/* <MyComponent /> */}
-      {/* <ProfilePicture /> */}
-      {/* {fruits.length > 0 && <List items={fruits} category="Fruits" />}
-    {vegetables.length > 0 && <List items={vegetables} category="Vegetables" />} */}
-      {/* <UserGreeting  isLoggedIn={true} username="Bonko" /> */}
-      {/* <Student name="James" age={30} isStudent={true} />
-    <Student name="Bob" age={43} isStudent={false} />
-    <Student name="Kon" age={12} isStudent={true} />
-    <Student name="Squid" age={50} isStudent={true} />
-    <Student name="Larry" /> */}
-      {/* <Button/> */}
-      {/* <Card/>
-    <Card/>
-  <Card/> */}
-      {/* <Header/>
-      <Food/>
-    <Footer/> */}
-
-      {/* <TempComp /> */}
-    </>
+    <div className="flex gap-2">
+      <div className="flex flex-col gap-2 p-6">
+        {pages.map(page => {
+          return (
+            <NavLink
+              key={page.name}
+              to={`/${page.name}`}
+              className={({ isActive }) => {
+                return `${isActive ? "text-teal-500" : ""} border-b-2`;
+              }}
+            >
+              {page.title}
+            </NavLink>
+          );
+        })}
+      </div>
+      <div className="p-8">
+        <Outlet />
+      </div>
+    </div>
   );
 }
 

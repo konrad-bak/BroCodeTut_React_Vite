@@ -1,5 +1,6 @@
 import React, { useState, createContext } from "react";
 import ComponentB from "./ComponentB";
+import "./style.css";
 
 export const UserContext = createContext();
 
